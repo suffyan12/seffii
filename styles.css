@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(225, 218, 218);
+}
+
+.navbar-brand img {
+    background-color: rgb(220, 24, 24);
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+
+.card {
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #010910;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #c4c8cb;
+}

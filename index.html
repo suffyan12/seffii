@@ -1,0 +1,334 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodpanda</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="assests/foodpanda.png" alt="Foodpanda Logo" width="100" height="100">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <a href="#" data-toggle="modal" data-target="#forgotPasswordModal">Forgot password?</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot password?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send reset link</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Restaurants Listing -->
+    <div class="container">
+        <h2>Restaurants</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/kherpuri.jpg" alt="Kherpuri" width="100%" height="50">
+                    <div class="card-body">
+                        <h5 class="card-title">Kherpuri</h5>
+                        <p class="card-text">Daal, Chicken, Rice, Roti, Naan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/14 street.jpg" alt="14 Street" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">14 Street</h5>
+                        <p class="card-text">Special Pizza, Pasta, Roll</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/kebabish continenta.jpg" alt="Kabaish" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Kabaish</h5>
+                        <p class="card-text">Beef Quorma, Rice, Roti, Naan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/La Serre Restaurant.jpg" alt="La Saree" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">La Saree</h5>
+                        <p class="card-text">Daal, Chicken, Rice, Pakora</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/kfc.jpg" alt="KFC" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">KFC</h5>
+                        <p class="card-text">Zinger Burger, pizza</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/Bobby's Restaurant.JPG" alt="Bobby's Restaurant" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Bobby's Restaurant</h5>
+                        <p class="card-text">Address: PAK CONTINENTAL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/Nakhlistan.jpg" alt="Nakhlistan" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Nakhlistan</h5>
+                        <p class="card-text">Daal, Chicken, Rice, Roti, Naan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/Daddys Grill.jpg" alt="Daddys Grill" width="200%">
+                    <div class="card-body">
+                        <h5 class="card-title">Daddys Grill</h5>
+                        <p class="card-text">Address: 50, Block C,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/LIT Bahawalpur.jpg" alt="LIT Bahawalpur" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">LIT</h5>
+                        <p class="card-text">Daal, Chicken, Rice, Roti, Naan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/Papa's kitchen.JPG" alt="Papa's kitchen" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Papa's kitchen</h5>
+                        <p class="card-text">Daal, Chicken, Rice, Roti, Naan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/gossip cafe.jpg" alt="Gossip cafe" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Gossip cafe</h5>
+                        <p class="card-text">Daal, Chicken, Rice, Roti, Naan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="assests/ChachaChah Restaurant.jpg" alt="ChachaChah Restaurant" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">ChachaChah Restaurant</h5>
+                        <p class="card-text">Address: Civil Hospital Road, </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Placement -->
+    <div class="container">
+        <h2>Order Placement</h2>
+        <form>
+            <div class="form-group">
+                <label for="restaurant">Select Restaurant</label>
+                <select class="form-control" id="restaurant">
+                    <option value="">Select Restaurant</option>
+                    <option value="kherpuri">Kherpuri</option>
+                    <option value="14street">14 Street</option>
+                    <option value="kabaish">Kabaish</option>
+                    <option value="lasaree">La Saree</option>
+                    <option value="kfc">KFC</option>
+                    <option value="naklistan">Naklistan</option>
+                    <option value="Gossip cafe">Gossip cafe</option>
+                    <option value="LIT Bahawalpur">LIT Bahawalpur</option>
+                    <option value="Daddys Grill">Daddys Grill</option>
+                    <option value="Bobby's Restaurant">Bobby's Restaurant</option>
+                    <option value="Papa's kitchen">Papa's kitchen</option>
+                    <option value="ChachaChah Restaurant">ChachaChah Restaurant</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item">Select Item</label>
+                <select class="form-control" id="item">
+                    <option value="">Select Item</option>
+                    <option value="daal">Daal</option>
+                    <option value="chicken">Chicken</option>
+                    <option value="rice">Rice</option>
+                    <option value="roti">Roti</option>
+                    <option value="naan">Naan</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="pasta">Pasta</option>
+                    <option value="roll">Roll</option>
+                    <option value="beefquorma">Beef Quorma</option>
+                    <option value="pakora">Pakora</option>
+                    <option value="zingerburger">Zinger Burger</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" value="1">
+            </div>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+    </div>
+
+    <!-- Payment Method -->
+    <div class="container">
+        <h2>Payment Method</h2>
+        <form>
+            <div class="form-group">
+                <label for="paymentMethod">Select Payment Method</label>
+                <select class="form-control" id="paymentMethod">
+                    <option value="">Select Payment Method</option>
+                    <option value="cash">Cash</option>
+                    <option value="accountTransfer">Account Transfer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="account">Select Account</label>
+                <select class="form-control" id="account">
+                    <option value="">Select Account</option>
+                    <option value="hbl">HBL</option>
+                    <option value="meezan">Meezan</option>
+                    <option value="kkl">KKL</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Make Payment</button>
+        </form>
+    </div>
+
+    <!-- Feedback and Ratings -->
+    <div class="container">
+        <h2>Feedback and Ratings</h2>
+        <form>
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <select class="form-control" id="rating">
+                    <option value="">Select Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <textarea class="form-control" id="feedback" placeholder="Enter feedback"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
